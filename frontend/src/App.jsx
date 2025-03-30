@@ -12,23 +12,23 @@ function App() {
     }, []);
 
     const fetchTodos = async () => {
-        const response = await axios.get('http://localhost:5000/todos');
+        const response = await axios.get('https://render-0b7b.onrender.com/todos');
         setTodos(response.data);
       };
     
       const addTodo = async () => {
-        const response = await axios.post('http://localhost:5000/todos', { task, completed: false });
+        const response = await axios.post('https://render-0b7b.onrender.com/todos', { task, completed: false });
         setTodos([...todos, response.data]);
         setTask('');
       };
     
       const updateTodo = async (id, completed) => {
-        const response = await axios.put(`http://localhost:5000/todos/${id}`, { completed });
+        const response = await axios.put(`https://render-0b7b.onrender.com/todos/${id}`, { completed });
         setTodos(todos.map(todo => (todo._id === id ? response.data : todo)));
       };
     
       const deleteTodo = async (id) => {
-        await axios.delete(`http://localhost:5000/todos/${id}`);
+        await axios.delete(`https://render-0b7b.onrender.com/todos/${id}`);
         setTodos(todos.filter(todo => todo._id !== id));
       };
 

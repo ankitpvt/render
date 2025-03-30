@@ -13,7 +13,7 @@ const _dirname = path.resolve();
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow requests from this origin
+    origin: 'https://render-0b7b.onrender.com', // Allow requests from this origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     credentials: true, // Allow cookies to be sent
